@@ -4,27 +4,21 @@ import java.util.Scanner;
 
 public class LineComparision {
 
-    static void lengthCalculate(double x1,double y1,double x2,double y2){
-        double length = Math.sqrt((x2-x1)*2 + (y2-y1)*2);
-        System.out.println(length);
-
+    static void equals(Integer lenght1, Integer lenght2){
+        boolean result = lenght1.equals(lenght2);
+        System.out.println(result);
     }
 
     public static void main(String[] args) {
 
-        double x1;
-        double y1;
-        double x2;
-        double y2;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter First point x1 :");
-        x1 = scanner.nextInt();
-        System.out.println("Enter Second point y1 :");
-        x2 = scanner.nextInt();
-        System.out.println("Enter third point x2 :");
-        y1 = scanner.nextInt();
-        System.out.println("Enter Fourth point y2 :");
-        y2 = scanner.nextInt();
-        lengthCalculate(x1,x2,y1,y2);
+        int x1 = 2;  int y1 = 3;
+        int x2 = 6;  int y2 = 4;
+        Integer length1 = (int)Math.sqrt((x2-x1)*2 + (y2-y1)*2);
+        System.out.println("Length of 1st line is : "+length1);
+        int p1 = 3;  int q1 = 4;
+        int p2 = 7;  int q2 = 1;
+        Integer length2 = (int)Math.sqrt((p2-p1)*2 + (q2-q1)*2);
+        System.out.println("Length of second line is : "+length2);
+        equals(length1,length2);
     }
 }
